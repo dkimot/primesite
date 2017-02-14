@@ -1,0 +1,66 @@
+.repairmsg {
+  background: #ffffff;
+  width: 100%;
+  text-align: center;
+}
+
+.tab-item .active {
+  background: #ffffff;
+}
+
+.tab-item .active > a {
+  color: #000000;
+}
+
+.tab-item {
+  background: #5D9CEC;
+}
+
+.tab-item > a {
+  color: #FFFFFF;
+}
+
+.tab-pane > h1 {
+  text-align: center;
+}
+
+.footer {
+  min-height: 25em;
+  width: 100%;
+  background: #4A89DC;
+}
+
+.cards {
+  width: 100px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 5px;
+  position: absolute;
+  right: 4%;
+  padding: 10px;
+  padding-top: 15px;
+  font-size: larger;
+}
+
+.drop-shadow {
+  -webkit-box-shadow: 0px 10px 17px 1px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 10px 17px 1px rgba(0,0,0,0.3);
+  box-shadow: 0px 10px 17px 1px rgba(0,0,0,0.3);
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .topic__infos {
+    font-size: 10px;
+  }
+
+  .topic__infos > h4 {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .topic__infos {
+    padding-top: 50px;
+  }
+}
