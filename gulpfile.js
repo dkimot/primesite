@@ -42,6 +42,6 @@ gulp.task('style', function() {
     .pipe(gulp.dest(cssDest));
 });
 
-gulp.task('build', ['scripts', 'style'], function() {
+gulp.task('build', ['style'], function() {
   console.log("GULP: Scripts and styles built. You are good to go.");
 });
