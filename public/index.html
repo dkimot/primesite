@@ -23,72 +23,80 @@
   <body style="background-color: #FFFFFF">
     <div class="docs-header drop-shadow">
       <!-- nav -->
-      <nav class="navbar navbar-default navbar-custom drop-shadow" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-left">
-              <li><a class="nav-link current" href="index.html">Prime Systems</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <!-- <li><a class="nav-link" href="#">Blog</a></li> -->
-              <li><a class="nav-link" href="#">About</a></li>
-              <li><a class="nav-link" href="#">Contact</a></li>
-              <li><a class="nav-link" href="#">Repair</a></li>
-              <li><a class="nav-link" href="#">Shop</a></li>
-              <li><a class="nav-link" href="#">Account</a></li>
-            </ul>
-          </div>
+      <nav id="navbar" class="" role="navigation">
+        <div class="navbar-content">
+          <ul class="navbar-header">
+          </ul>
+          <ul class="navbar-list">
+            <li class="navbar-item navbar-logo">
+              <a class="navbar-link navbar-link-logo" href="/" id="navbar-firstfocus">
+                <span class="navbar-link-text">Prime Systems</span>
+              </a>
+            </li>
+            <li class="navbar-item navbar-item-menu navbar-desktops">
+              <a class="navbar-link navbar-link-desktops" href="/desktops/">
+                <span class="navbar-link-text">Desktops</span>
+              </a>
+            </li>
+            <li class="navbar-item navbar-item-menu navbar-laptops">
+              <a class="navbar-link navbar-link-laptops" href="/laptops/">
+                <span class="navbar-link-text">Laptops</span>
+              </a>
+            </li>
+            <li class="navbar-item navbar-item-menu navbar-servers">
+              <a class="navbar-link navbar-link-servers" href="/servers/">
+                <span class="navbar-link-text">Servers</span>
+              </a>
+            </li>
+            <li class="navbar-item navbar-item-menu navbar-business">
+              <a class="navbar-link navbar-link-business" href="/business/">
+                <span class="navbar-link-text">Business</span>
+              </as>
+            </li>
+            <li class="navbar-item navbar-item-menu navbar-repair">
+              <a class="navbar-link navbar-link-repair" href="/repair/">
+                <span class="navbar-link-text">Repair</span>
+              </a>
+            <li>
+          </ul>
         </div>
       </nav>
-    <!-- header -->
-      <div class="container repairmsg">
-        <div class="topic__infos">
-          <h4 style="display: inline-block">Need Repairs? Call us now: <a href="tel:1-801-546-2666" class="float-right">(801) 546-2666</a> &nbsp; Or: Visit us at 230 West 200 North Kaysville, UT &nbsp;</h4><a href="#">Get Directions</a></h3>
-        </div>
-      </div>
       <!-- slider -->
-      <div class="slider single-item" id="index-slider">
-        <div class="slider-item"><p>Slide 1</p></div>
-        <div class="slider-item"><p>Slide 2</p></div>
-        <div class="slider-item"><p>Slide 3</p></div>
-        <div class="slider-item"><p>Slide 3</p></div>
-        <div class="slider-item"><p>Slide 3</p></div>
-        <div class="slider-item"><p>Slide 3</p></div>
-      </div>
+      <main class="main with-promos" role="main">
       <!-- 4 boxes -->
-      <div class="sales-container">
-        <div class="sales-item">
-          <a href="#">
-            <img class="sales-photo" src="public/img/intel-nuc.png" alt="Intel NUC" />
-          </a>
-        </div>
-        <div class="sales-item">
-          <a href="#" style="display: flex; max-height: 243px;">
-            <img class="sales-photo" src="public/img/home-heroBASE.png" alt="Home Hero Base" style="width: 75%; margin: auto;" />
-          </a>
-        </div>
-        <div class="sales-item">
-          <a href="#">
-            <h4>Pre-Owned</h4>
-            <p>Get pre-owned computers at a great discount</p>
-          </a>
-        </div>
-        <div class="sales-item">
-          <a href="#">
-            <h4>Business Solutions</h4>
-            <p>See how a Prime Systems business setup can help your bottom line.</p>
-          </a>
-        </div>
-      </div>
-    </div>
+      <section id="promos" class="promos row">
+          <ul>
+            <li id="promo-position-0" class="promo-position promo-tile-position-0 column large-3 medium-6 small-12">
+              <a class="promo promo-nuc" data-promo-id="nuc" href="/nuc/">
+                <span class="promo-label">
+                  A true desktop experience.
+                </span>
+              </a>
+            </li>
+            <li id="promo-position-1" class="promo-position promo-tile-position-1 column large-3 medium-6 small-12">
+              <a class="promo promo-gaming" data-promo-id="gaming" href="/gaming/">
+                <span class="promo-label">
+                  Get the performance, and price, you need.
+                </span>
+              </a>
+            </li>
+            <li id="promo-position-2" class="promo-position promo-tile-position-2 column large-3 medium-6 small-12">
+              <a class="promo promo-components" data-promo-id="components" href="/shop/components">
+                <span class="promo-label">
+                  We can help you get exactly what you need.
+                </span>
+              </a>
+            </li>
+            <li id="promo-position-2" class="promo-position promo-tile-position-3 column large-3 medium-6 small-12">
+              <a class="promo promo-business" data-promo-id="business" href="/business/">
+                <span class="promo-label">
+                  See how Prime Systems can help your bottom line.
+                </span>
+              </a>
+            </li>
+          </ul>
+        </section>
+    </main>
     <!-- footer -->
     <div class="footer">
       <br />
@@ -99,15 +107,5 @@
         <i class="fa fa-cc-amex" aria-hiddent="true"></i>
       </div>
     </div>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('.single-item').slick({
-          arrows: false,
-          centerMode: true,
-          slidesToScroll: 1,
-          autoplay: true
-        });
-      });
-    </script>
   </body>
 </html>
