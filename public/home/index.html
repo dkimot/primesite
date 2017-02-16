@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Home Solutions - Prime Systems</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage plugin by Alvaro Trigo. Pure javascript version of full screen slider." />
+	<meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple,pure,javascript,slider,hijacking" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="javascript.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="tingle.min.css" />
+	<link rel="stylesheet" type="text/css" href="../build/site.min.css" />
+</head>
+<body>
+
+	<nav id="navbar" class="" role="navigation">
+		<div class="navbar-content">
+			<ul class="navbar-header">
+			</ul>
+			<ul class="navbar-list">
+				<li class="navbar-item navbar-logo">
+					<a class="navbar-link navbar-link-logo" href="/" id="navbar-firstfocus">
+						<span class="navbar-link-text">Prime Systems</span>
+					</a>
+				</li>
+				<li class="navbar-item navbar-item-menu navbar-desktops">
+					<a class="navbar-link navbar-link-desktops" href="/home/">
+						<p>Home Desktops</p>
+					</a>
+				</li>
+				<li class="navbar-item navbar-item-menu navbar-business">
+					<a class="navbar-link navbar-link-business" href="/business/">
+						<p>Business Solutions</p>
+					</a>
+				</li>
+				<li class="navbar-item navbar-item-menu navbar-repair">
+					<a class="navbar-link navbar-link-repair" href="/repair/">
+						<p>Repair</p>
+					</a>
+				</li>
+				<li class="navbar-item navbar-item-menu navbar-shop">
+					<a class="navbar-link navbar-link-shop" href="/shop/">
+						<p>Shop</p>
+					</a>
+				<li>
+			</ul>
+		</div>
+	</nav>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="content">
+			<h1>Home Desktops</h1>
+			<br />
+			<h3>Intel NUC</h3>
+			<p>A true desktop experience.</p>
+			<br />
+			<button class="tingle-btn tingle-btn--primary" id="js-modal-button-nuc">Learn More</button>
+			<p class="scroll-down">Need more power? Scroll down.</p>
+		</div>
+	</div>
+	<div class="section" id="section1">
+		<div class="content">
+			<h1>Home Professional</h1>
+			<br />
+			<h3>True Quad-Core Power</h3>
+			<p>Perfect for work and play.</p>
+			<br />
+			<button class="tingle-btn tingle-btn--primary" id="js-modal-button-pro">Learn More</button>
+			<p class="scroll-down">Need even more power? Scroll down.</p>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="content">
+			<h1>High Performance</h1>
+			<br />
+			<p>3D gaming, or 3D rendering we have the performance, and price, you want.</p>
+			<br />
+			<button class="tingle-btn tingle-btn--primary" id="js-modal-button-game">Learn More</button>
+		</div>
+	</div>
+</div>
+
+<!-- Modal Content -->
+<div class="modal-content">
+	<!-- NUC Modal -->
+	<div class="modal-content-nuc">
+		<p>NUC Modal</p>
+	</div>
+
+	<!-- Pro Modal -->
+	<div class="modal-content-pro">
+		<p>Pro Modal</p>
+	</div>
+
+	<!-- Gaming Modal -->
+	<div class="modal-content-game">
+		<p>Gaming Modal</p>
+	</div>
+</div>
+
+<script type="text/javascript" src="javascript.fullPage.min.js"></script>
+<script type="text/javascript">
+	fullpage.initialize('#fullpage', {
+		'menu': false,
+    'anchors':['desktop', 'professional', 'gaming'],
+    'navigation': true,
+    'navigationPosition': 'right',
+    'navigationColor': '#000',
+    'navigationTooltips': ['Home Desktops', 'Home Professional', 'High Performance'],
+    'slidesNavigation': true,
+    'slidesNavPosition': 'bottom',
+    'scrollBar': false,
+
+    //scrolling
+    'css3': true,
+    'scrollingSpeed': 700,
+    'autoScrolling': true,
+    'easingcss3': 'ease',
+    'loopHorizontal': true,
+    'touchSensitivity': 5,
+
+    //Accessibility
+    'keyboardScrolling': true,
+    'recordHistory': true,
+
+    //design
+    'controlArrows': true,
+
+    //Custom selectors
+    'sectionSelector': '.section',
+    'slideSelector': '.slide',
+
+
+    //events
+    'afterLoad': null,
+    'onLeave': null,
+    'afterRender': null,
+    'afterResize': null,
+    'afterReBuild': null,
+    'afterSlideLoad': null,
+    'onSlideLeave': null
+	});
+</script>
+<script type="text/javascript" src="tingle.min.js"></script>
+<script type="text/javascript">
+	var nucModal = new tingle.modal({
+		footer: true,
+		stickyFooter: true
+	});
+
+	// Set content
+	nucModal.setContent(document.querySelector('.modal-content-nuc').innerHTML);
+
+	// Add a button
+	var nucButton = document.querySelector('#js-modal-button-nuc');
+	nucButton.addEventListener('click', function() {
+		nucModal.open();
+	});
+
+	nucModal.addFooterBtn('Buy', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function(){
+		nucModal.close();
+	});
+
+	nucModal.addFooterBtn('Back', 'tingle-btn tingle-btn--default tingle-btn--pull-left', function() {
+		nucModal.close();
+	});
+
+	var proModal = new tingle.modal({
+		footer: true,
+		stickyFooter: true
+	});
+
+	proModal.setContent(document.querySelector('.modal-content-pro'));
+
+	var proButton = document.querySelector('#js-modal-button-pro');
+	proButton.addEventListener('click', function() {
+		proModal.open();
+	});
+
+	proModal.addFooterBtn('Buy', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function(){
+		proModal.close();
+	});
+
+	proModal.addFooterBtn('Back', 'tingle-btn tingle-btn--default tingle-btn--pull-left', function() {
+		proModal.close();
+	});
+
+	var gameModal = new tingle.modal({
+		footer: true,
+		stickyFooter: true
+	});
+
+	gameModal.setContent(document.querySelector('.modal-content-game'));
+
+	var gameButton = document.querySelector('#js-modal-button-game');
+	gameButton.addEventListener('click', function() {
+		gameModal.open();
+	});
+
+	gameModal.addFooterBtn('Buy', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function() {
+		gameModal.close();
+	});
+
+	gameModal.addFooterBtn('Back', 'tingle-btn tingle-btn--primary tingle-btn--pull-left', function() {
+		gameModal.close();
+	});
+
+	// Set content
+</script>
+
+</body>
+</html>

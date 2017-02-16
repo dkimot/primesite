@@ -1,3 +1,7 @@
+.main {
+  margin-top: 0;
+}
+
 .sales-container {
   display: flex;
   background: #FFFFFF;
@@ -60,16 +64,11 @@
   text-align: center;
 }
 
-.footer {
+footer {
   min-height: 25em;
   width: 100%;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4a89dc+0,ffffff+100 */
-  background: #4a89dc; /* Old browsers */
-  background: -moz-linear-gradient(top,  #4a89dc 0%, #ffffff 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #4a89dc 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #4a89dc 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a89dc', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-  position: absolute;
+  position: relative;
 }
 
 .cards {
@@ -82,6 +81,12 @@
   padding: 10px;
   padding-top: 15px;
   font-size: larger;
+  display: flex;
+}
+
+.cards > i {
+  color: rgba(0, 0, 0, 0.8);
+  margin: auto;
 }
 
 .drop-shadow {

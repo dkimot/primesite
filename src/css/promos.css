@@ -32,3 +32,18 @@
   border-top: 2px solid #fff;
   border-right: 2px solid #fff;
 }
+
+.promo-nuc {
+  background-repeat: no-repeat;
+  background-image: url("../img/promos/nuc-square.jpg");
+}
+
+.promo-gaming {
+  background-repeat: no-repeat;
+  background-image: url("../img/promos/New_MAX210_Gaming_Desktop.png");
+}
+
+.promo-components {
+  background-repeat: no-repeat;
+  background-image: url("../img/promos/computerparts.jpg");
+}

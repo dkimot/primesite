@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.0 r15299"
+   sodipodi:docname="navbar.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="406.67801"
+     inkscape:cy="834.83571"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1672"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot10"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:25px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.13229194,0,0,0.13229268,-9.3518172,-25.689976)"><flowRegion
+         id="flowRegion12"
+         style="fill:#000000"><rect
+           id="rect14"
+           width="700"
+           height="140"
+           x="62.857143"
+           y="222.51968"
+           style="fill:#000000" /></flowRegion><flowPara
+         id="flowPara16"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:85.33333588px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000">Home Desktops</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot18"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:25px;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion20"><rect
+           id="rect22"
+           width="57.142857"
+           height="74.285713"
+           x="62.857143"
+           y="259.66254" /></flowRegion><flowPara
+         id="flowPara24"></flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.13229194,0,0,0.13229268,-9.4179631,-16.859337)"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:25px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot40"
+       xml:space="preserve"><flowRegion
+         style="fill:#000000"
+         id="flowRegion36"><rect
+           style="fill:#000000"
+           y="222.51968"
+           x="62.857143"
+           height="140"
+           width="700"
+           id="rect34" /></flowRegion><flowPara
+         style="font-size:85.33333588px;fill:#000000;-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+         id="flowPara38">Home Laptops</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot48"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:25px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.13229194,0,0,0.13229268,-9.4179631,-8.0179532)"><flowRegion
+         id="flowRegion44"
+         style="fill:#000000"><rect
+           id="rect42"
+           width="700"
+           height="140"
+           x="62.857143"
+           y="222.51968"
+           style="fill:#000000" /></flowRegion><flowPara
+         id="flowPara46"
+         style="font-size:85.33333588px;fill:#000000;-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">Business</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.13229194,0,0,0.13229268,-9.4179631,0.97788058)"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:25px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot56"
+       xml:space="preserve"><flowRegion
+         style="fill:#000000"
+         id="flowRegion52"><rect
+           style="fill:#000000"
+           y="222.51968"
+           x="62.857143"
+           height="140"
+           width="700"
+           id="rect50" /></flowRegion><flowPara
+         style="font-size:85.33333588px;fill:#000000;-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+         id="flowPara54">Repair</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot64"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:25px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.13229194,0,0,0.13229268,-9.0541603,11.561215)"><flowRegion
+         id="flowRegion60"
+         style="fill:#000000"><rect
+           id="rect58"
+           width="700"
+           height="140"
+           x="62.857143"
+           y="222.51968"
+           style="fill:#000000" /></flowRegion><flowPara
+         id="flowPara62"
+         style="font-size:85.33333588px;fill:#000000;-inkscape-font-specification:Arial;font-family:Arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">Shop</flowPara></flowRoot>  </g>
+</svg>

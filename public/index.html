@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="width: 100%;">
   <head>
     <meta charset="utf-8">
     <title>Home - Prime Systems</title>
@@ -7,8 +7,8 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- SmartAddon.com Verification -->
     <meta name="smartaddon-verification" content="936e8d43184bc47ef34e25e426c508fe" />
-	<meta name="keywords" content="Flat UI Design, UI design, UI, user interface, web interface design, user interface design, Flat web design, Bootstrap, Bootflat, Flat UI colors, colors">
-	<meta name="description" content="The complete style of the Bootflat Framework.">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
     <!-- site css -->
     <link rel="stylesheet" href="build/site.min.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
@@ -21,9 +21,8 @@
     <script type="text/javascript" src="build/site.min.js"></script>
   </head>
   <body style="background-color: #FFFFFF">
-    <div class="docs-header drop-shadow">
       <!-- nav -->
-      <nav id="navbar" class="" role="navigation">
+      <nav id="navbar" class="drop-shadow" role="navigation">
         <div class="navbar-content">
           <ul class="navbar-header">
           </ul>
@@ -34,28 +33,23 @@
               </a>
             </li>
             <li class="navbar-item navbar-item-menu navbar-desktops">
-              <a class="navbar-link navbar-link-desktops" href="/desktops/">
-                <span class="navbar-link-text">Desktops</span>
-              </a>
-            </li>
-            <li class="navbar-item navbar-item-menu navbar-laptops">
-              <a class="navbar-link navbar-link-laptops" href="/laptops/">
-                <span class="navbar-link-text">Laptops</span>
-              </a>
-            </li>
-            <li class="navbar-item navbar-item-menu navbar-servers">
-              <a class="navbar-link navbar-link-servers" href="/servers/">
-                <span class="navbar-link-text">Servers</span>
+              <a class="navbar-link navbar-link-desktops" href="/home/">
+                <p>Home Desktops</p>
               </a>
             </li>
             <li class="navbar-item navbar-item-menu navbar-business">
               <a class="navbar-link navbar-link-business" href="/business/">
-                <span class="navbar-link-text">Business</span>
-              </as>
+                <p>Business Solutions</p>
+              </a>
             </li>
             <li class="navbar-item navbar-item-menu navbar-repair">
               <a class="navbar-link navbar-link-repair" href="/repair/">
-                <span class="navbar-link-text">Repair</span>
+                <p>Repair</p>
+              </a>
+            </li>
+            <li class="navbar-item navbar-item-menu navbar-shop">
+              <a class="navbar-link navbar-link-shop" href="/shop/">
+                <p>Shop</p>
               </a>
             <li>
           </ul>
@@ -63,27 +57,54 @@
       </nav>
       <!-- slider -->
       <main class="main with-promos" role="main">
+        <div class="slideshow-container">
+          <div class="slides fade">
+            <img src="img/img_lights_wide.jpg" style="width: 100%;">
+            <div class="text">Caption</div>
+          </div>
+
+          <div class="slides fade">
+            <img src="img/img_mountains_wide.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+          </div>
+
+          <div class="slides fade">
+            <img src="img/img_nature_wide.jpg">
+            <div class="text">Caption Three</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br />
+
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
       <!-- 4 boxes -->
       <section id="promos" class="promos row">
           <ul>
             <li id="promo-position-0" class="promo-position promo-tile-position-0 column large-3 medium-6 small-12">
-              <a class="promo promo-nuc" data-promo-id="nuc" href="/nuc/">
+              <a class="promo promo-nuc" data-promo-id="nuc" href="/shop/nuc.html">
                 <span class="promo-label">
                   A true desktop experience.
                 </span>
               </a>
             </li>
             <li id="promo-position-1" class="promo-position promo-tile-position-1 column large-3 medium-6 small-12">
-              <a class="promo promo-gaming" data-promo-id="gaming" href="/gaming/">
+              <a class="promo promo-gaming" data-promo-id="gaming" href="/shop/gaming.html">
                 <span class="promo-label">
                   Get the performance, and price, you need.
                 </span>
               </a>
             </li>
             <li id="promo-position-2" class="promo-position promo-tile-position-2 column large-3 medium-6 small-12">
-              <a class="promo promo-components" data-promo-id="components" href="/shop/components">
+              <a class="promo promo-components" data-promo-id="components" href="/shop/components.html">
                 <span class="promo-label">
-                  We can help you get exactly what you need.
+                  Looking for parts? We can help.
                 </span>
               </a>
             </li>
@@ -98,7 +119,7 @@
         </section>
     </main>
     <!-- footer -->
-    <div class="footer">
+    <footer>
       <br />
       <h5 class="col-md-4">Copyright © 2017, Prime Systems Inc. - All Rights Reserved</h5>
       <div class="cards drop-shadow">
@@ -106,6 +127,34 @@
         <i class="fa fa-cc-mastercard" aria-hiddent="true"></i>
         <i class="fa fa-cc-amex" aria-hiddent="true"></i>
       </div>
-    </div>
+    </footer>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
   </body>
 </html>

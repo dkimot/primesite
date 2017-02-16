@@ -22,6 +22,10 @@
   font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
+.navbar-link, a:hover > p {
+  color: #000;
+}
+
 #navbar .navbar-content {
   margin: 0 auto;
   max-width: 980px;
@@ -113,13 +117,14 @@
   width: 100px;
 }
 
+/*
 #navbar .navbar-link-desktops {
   background-size: 28px 44px;
   background-repeat: no-repeat;
-  background-image: url();
   background-position: center center;
   background-origin: content-box;
   background-size: cover;
   width: 2em;
   max-width: 47.6px;
 }
+*/

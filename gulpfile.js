@@ -29,7 +29,7 @@ gulp.task('scripts', ['babelify'], function() {
 gulp.task('babelify', function() {
   return gulp.src(jsES6)
     .pipe(babel())
-    .pipe(gulp.dest('assets/js/babeled'));
+    .pipe(gulp.dest('src/js/babeled'));
 });
 
 gulp.task('style', function() {
