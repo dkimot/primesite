@@ -1,5 +1,15 @@
+p {
+  color: #303030;
+  font-size: 19px;
+  padding-top: 5px;
+}
+
+li > a > p {
+  color: white;
+}
+
 p.content {
-  color: black;
+  color: #303030;
   text-align: left;
 }
 
@@ -10,6 +20,10 @@ p.content {
 .content-div.center {
   margin: auto;
   text-align: center;
+}
+
+.content-div.auto {
+  margin: auto;
 }
 
 /* ===== Accordion CSS ===== */
@@ -28,13 +42,20 @@ button.accordion {
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 button.accordion.active, button.accordion:hover {
     background-color: #ddd;
+    font-size: 21px;
+}
+
+button.accordion {
+  font-size: 16px;
 }
 
 /* Style the accordion panel. Note: hidden by default */
 div.panel {
-    padding: 0 18px;
+    padding: 13px 18px;
     background-color: white;
     display: none;
+    border-style: solid;
+    border-width: 0px 3px 0px 3px;
 }
 
 .accordion-container {
@@ -43,7 +64,36 @@ div.panel {
 }
 
 p.acc-content {
-  color: black;
+  color: #303030;
+  font-size: 18px;
+  display: inline-block;
+}
+
+p.acc-content.right {
+  text-align: right;
 }
 
 /* ===== End Accordion CSS ===== */
+
+h4 {
+  font-size: 24px;
+}
+
+div.repair-3 {
+  min-width: 33%;
+  display: inline-block;
+  min-height: 200px;
+  padding: 15px auto;
+  text-align: center;
+  align-items: center;
+}
+
+div.repair-3 > ul > li {
+  color: #404040;
+  font-size: 19px;
+}
+
+span.rightf {
+  float: right;
+  color: #303030;
+}
