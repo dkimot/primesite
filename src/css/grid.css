@@ -11,3 +11,15 @@
 .large-3 {
   width: 25%;
 }
+
+@media only screen and (max-width: 1068px) {
+  .medium-6 {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  .small-12 {
+    width: 100%;
+  }
+}
