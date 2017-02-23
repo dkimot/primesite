@@ -5,6 +5,7 @@
     border-radius: 5px;
     padding: 16px;
     margin: 16px 0;
+    max-width: 450px;
 }
 
 /* Clear floats after containers */
@@ -43,10 +44,12 @@
 .t-head {
   font-size: 16px;
   font-weight: bold;
+  color: #383838;
 }
 
 .t-quote {
   font-size: 14px;
+  color: #383838;
 }
 
 .testimonial-btn {

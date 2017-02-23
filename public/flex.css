@@ -1,0 +1,18 @@
+main.flex-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+div.flex-child {
+  min-width: 450px;
+}
+
+div.testimonial-long {
+  text-overflow: ellipsis;
+
+  /* Prereqs for text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+}

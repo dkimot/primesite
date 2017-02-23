@@ -64,5 +64,7 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', ['build', 'browser-sync'], function() {
   gulp.watch("src/css", ['style']).on('change', bs.reload);
   gulp.watch("src/js", ['scripts']).on('change', bs.reload);
-  gulp.watch("public/*.html").on('change', bs.reload);
+  gulp.watch("public/**/*.html").on('change', bs.reload);
+  gulp.watch("public/**/*.css").on('change', bs.reload);
+  gulp.watch("public/**/*.js").on('change', bs.reload);
 });
