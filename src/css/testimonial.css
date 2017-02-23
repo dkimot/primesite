@@ -1,5 +1,5 @@
 /* Style the container with a rounded border, grey background and some padding and margin */
-.container {
+.testimonial-container {
     border: 2px solid #ccc;
     background-color: #eee;
     border-radius: 5px;
