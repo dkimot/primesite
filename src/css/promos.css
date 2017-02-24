@@ -2,6 +2,10 @@
   border-bottom: 2px solid #fff;
 }
 
+main {
+  padding-top: 1.5em;
+}
+
 .promos ul {
   margin: 0;
   padding: 0;

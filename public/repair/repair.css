@@ -22,6 +22,10 @@ p.content {
   text-align: center;
 }
 
+.acc-panel {
+  color: #e3e3e3;
+}
+
 .content-div.auto {
   margin: auto;
 }

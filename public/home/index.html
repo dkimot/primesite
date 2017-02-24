@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="javascript.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="tingle.min.css" />
 	<link rel="stylesheet" type="text/css" href="stickynav.css" />
+	<link rel="stylesheet" type="text/css" href="modal.css" />
 	<link rel="stylesheet" type="text/css" href="../build/site.min.css" />
 </head>
 <body>
@@ -56,8 +57,9 @@
 		<div class="content">
 			<h1 class="slide-header">Home Desktops</h1>
 			<br />
-			<h3>Intel NUC</h3>
+			<h3>Intel® NUC</h3>
 			<p>A true desktop experience.</p>
+			<p>Starting at $649</p>
 			<br />
 			<button class="tingle-btn tingle-btn--primary" id="js-modal-button-nuc">Learn More</button>
 			<p class="scroll-down">Need more power? Scroll down.</p>
@@ -69,6 +71,7 @@
 			<br />
 			<h3>True Quad-Core Power</h3>
 			<p>Perfect for work and play.</p>
+			<p>Starting at $799</p>
 			<br />
 			<button class="tingle-btn tingle-btn--primary" id="js-modal-button-pro">Learn More</button>
 			<p class="scroll-down">Need even more power? Scroll down.</p>
@@ -78,7 +81,8 @@
 		<div class="content">
 			<h1 class="slide-header">High Performance</h1>
 			<br />
-			<p>3D gaming, or 3D rendering we have the performance, and price, you want.</p>
+			<p>3D gaming, or 3D rendering, we have the performance, and price, you want.</p>
+			<p>Starting at $999</p>
 			<br />
 			<button class="tingle-btn tingle-btn--primary" id="js-modal-button-game">Learn More</button>
 		</div>
@@ -86,20 +90,32 @@
 </div>
 
 <!-- Modal Content -->
-<div class="modal-content">
+<div class="modals">
 	<!-- NUC Modal -->
-	<div class="modal-content-nuc">
-		<p>NUC Modal</p>
+	<div class="modal-content-nuc" id="nuc-modal">
+		<h2 class="modal-header">Intel® NUC</h2>
+		<h3 class="center-text">The Intel® Next Unit of Computing is a true desktop experience.</h3><br />
+		<p>A mini PC that re-imagines the desktop PC into a pint-sized package, letting you work, study, or play in any room.</p>
+		<br />
+		<p>We custom build every NUC with your specifications so you have the memory, hard drive, and operating system of your choice.</p>
 	</div>
 
 	<!-- Pro Modal -->
-	<div class="modal-content-pro">
-		<p>Pro Modal</p>
+	<div class="modal-content-pro" id="pro-modal">
+		<h2 class="modal-header">Home Professional</h2>
+		<h3 class="center-text">With true quad-core power you can handle anything work throws at you.</h3><br />
+		<p>Worried about that deadline? With our custome built computers you do not have to worry about the computer holding you up.</p>
+		<br />
+		<p>With over 25 years in business we know computers. Don't waste your time with overpriced cookie cutter solutions at a big box store.</p>
 	</div>
 
 	<!-- Gaming Modal -->
-	<div class="modal-content-game">
-		<p>Gaming Modal</p>
+	<div class="modal-content-game" id="gaming-modal">
+		<h2 class="modal-header">High Performance Computing</h2>
+		<h3 class="center-text">With dedicated graphics and extra memory you can handle anything.</h3><br />
+		<p>We can build any computer you can imagine. Let us know and we can help you configure, buy, or build the computer of your dreams.</p>
+		<br />
+		<p>Trying to game on a budget? We will beat ANY PC Laptops quote. Laptop, Desktop, Server, it doesn't matter. Bring us a PC Laptops quote and we will give you a better computer for a better price.</p>
 	</div>
 </div>
 

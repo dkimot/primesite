@@ -6,3 +6,15 @@ ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, hgroup, p, blockquote, figure, f
 * {
   display: block;
 }
+
+title {
+  display: none;
+}
+
+script {
+  display: none;
+}
+
+style {
+  display: none;
+}
