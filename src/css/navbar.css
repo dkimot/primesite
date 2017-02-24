@@ -11,7 +11,7 @@
   height: 48px;
   max-height: 44px;
   background: #333;
-  background: rbga(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   font-size: 17px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -21,6 +21,10 @@
   backdrop-filter: saturate(180%) blur(20px);
   font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
+
+/* at 497px the current navbar collapses unfavorably
+ * This will obviously change once we begin marketing towards businesses and add to the navbar
+ */
 
 .navbar-link, a:hover > p {
   color: #000;
