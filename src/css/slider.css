@@ -35,6 +35,10 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+div.slides > img {
+  width: 100%;
+}
+
 /* Caption text */
 .text {
   color: #f2f2f2;
