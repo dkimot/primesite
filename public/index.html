@@ -147,33 +147,40 @@
       </div>
     </footer>
     <script type="text/javascript">
-      var slideIndex = 1;
+    var slideIndex = 0;
+    var auto = true;
+    showSlides();
 
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+      auto = false;
+    }
 
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
 
-      function showSlides(n) {
+    function showSlides(n) {
+        if (!n && !auto) {return}
         var i;
-        var slides = document.getElementsByClassName("slides");
         var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
+        var slides = document.getElementsByClassName("slides");
         for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
+            slides[i].style.display = "none";
         }
         for (i = 0; i < dots.length; i++) {
           dots[i].className = dots[i].className.replace(" active", "");
         }
-        slides[slideIndex - 1].style.display = "block";
+        if (n) {
+          slideIndex = n;
+        } else {
+          slideIndex++;
+        }
+        if (slideIndex> slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
         dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
-      }
-      showSlides();
+        if (!n) {setTimeout(showSlides, 4000);} // Change image every 4 seconds
+    }
     </script>
   </body>
 </html>
