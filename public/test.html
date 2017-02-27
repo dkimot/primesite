@@ -12,6 +12,14 @@
     <script type="text/javascript" src="./build/site.min.js"></script>
   </head>
   <body>
-    <script>console.log("test");</script>
+    <div id="app"></div>
+    <script>console.log("easter egg, good job chad");</script>
+    <p onclick="lo()">a</p>
+    <script>var lo = function log() {console.log("success"); }</script>
+    <script>
+      var appContainer = document.getElementById('app');
+      var app = components.item;
+      appContainer.innerHTML = app;
+    </script>
   </body>
 </html>
