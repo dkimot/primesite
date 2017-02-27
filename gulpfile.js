@@ -7,7 +7,6 @@ const rename   = require('gulp-rename');
 const uglify   = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
 const bs       = require('browser-sync').create();
-const sass     = require('gulp-sass');
 
 let jsES6    = 'src/js/*.js',
     jsPath   = 'src/js/babeled/',
@@ -39,12 +38,6 @@ gulp.task('style', function() {
     .pipe(rename('site.min.css'))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(cssDest));
-});
-
-gulp.task('sass', function() {
-  return gulp.src('./src/scss/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(cssFiles + '/sassed/'));
 });
 
 gulp.task('build', ['style', 'scripts'], function() {

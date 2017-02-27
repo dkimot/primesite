@@ -1,11 +1,23 @@
 {
   "name": "primesite",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "The site for the Prime Systems Computer Store",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-sass": "^3.1.0",
+    "gulp-less": "^3.3.0",
+    "node-sass": "^4.5.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,20 +28,5 @@
   "bugs": {
     "url": "https://github.com/dkimot/primesite/issues"
   },
-  "homepage": "https://github.com/dkimot/primesite#readme",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-clean-css": "^3.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-less": "^3.3.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^2.0.1"
-  },
-  "dependencies": {
-    "browser-sync": "^2.18.8",
-    "express": "^4.14.1",
-    "node-sass": "^4.5.0"
-  }
+  "homepage": "https://github.com/dkimot/primesite#readme"
 }
