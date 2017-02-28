@@ -12,14 +12,40 @@
     <script type="text/javascript" src="./build/site.min.js"></script>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app" style="min-height: 50px; min-width: 70px;" onclick="get()"></div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>console.log("easter egg, good job chad");</script>
-    <p onclick="lo()">a</p>
-    <script>var lo = function log() {console.log("success"); }</script>
     <script>
       var appContainer = document.getElementById('app');
-      var app = components.item;
-      appContainer.innerHTML = app;
+      function get() {
+        var start = Date.now();
+        console.log("Start",start);
+        axios.get('http://54.218.222.109:3030/products')
+          .then(function (res) {
+            if (typeof(Storage) !== "undefined") {
+              console.log("Use the local storage");
+              localStorage.setItem("products", res.data.data);
+            } else {
+              console.log("This browser needs updating");
+            }
+            console.log(localStorage);
+            console.log(res);
+            /*var product = res.data.data;
+            setProduct(product);*/
+            console.log("Finished in " + (Date.now() - start) + 'ms');
+          })
+          .catch(function (err) {
+            console.log(err);
+          });
+      }
+      function setProduct(product) {
+        var temp = components.product;
+        appContainer.innerHTML = temp;
+        document.getElementById('product-name').innerHTML = product.name;
+        document.getElementById('product-price').innerHTML = product.price;
+        document.getElementById('product-slug').innerHTML = product.slug;
+        document.getElementById('product-description').innerHTML = product.category;
+      }
     </script>
   </body>
 </html>
