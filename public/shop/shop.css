@@ -1,0 +1,61 @@
+div#app {
+  margin-top: 50px;
+  height: 1000px;
+}
+
+div#shopCatalog {
+  margin: auto;
+  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: space-around;
+}
+
+div.productContainer {
+  padding: 2em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  min-height: 250px;
+  margin-left: 5px;
+  margin-top: 10px;
+  -webkit-box-shadow: 10px 0px 58px 17px rgba(0,0,0,0.27);
+  -moz-box-shadow: 10px 0px 58px 17px rgba(0,0,0,0.27);
+  box-shadow: 10px 0px 50px 10px rgba(0,0,0,0.27);
+}
+
+div.productContainer > p {
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 2px;
+  color: #404040;
+}
+
+div.productContainer > p.productPrice {
+  font-size: 20px;
+}
+
+div.productContainer > p.hidden {
+  display: none;
+}
+
+div.productContainer > p.productCat {
+  font-size: 10px;
+  color: #909090;
+}
+
+div.productContainer > a {
+  font-size: 12px;
+  padding-top: 3px;
+  color: #202020;
+}
+
+div.productContainer > img {
+  max-width: 200px;
+  max-height: 200px;
+  margin: auto;
+  padding-bottom: 1em;
+  padding-top: 4px;
+}

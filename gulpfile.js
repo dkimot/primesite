@@ -6,6 +6,7 @@ const concat   = require('gulp-concat');
 const rename   = require('gulp-rename');
 const uglify   = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
+const gzip     = require('gulp-gzip');
 const bs       = require('browser-sync').create();
 
 let jsES6    = 'src/js/*.js',
@@ -37,6 +38,7 @@ gulp.task('style', function() {
     .pipe(gulp.dest(cssDest))
     .pipe(rename('site.min.css'))
     .pipe(cleanCSS({compatibility: 'ie8'}))
+    //.pipe(gzip({ extension: false }))
     .pipe(gulp.dest(cssDest));
 });
 

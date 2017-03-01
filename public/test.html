@@ -8,38 +8,46 @@
     <meta name="description" content="">
     <!-- site css -->
     <link rel="stylesheet" href="build/site.min.css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+    <style>
+      p.log-output {
+        font-size: 12px;
+      }
+    </style>
     <script type="text/javascript" src="./build/site.min.js"></script>
   </head>
   <body>
-    <div id="app" style="min-height: 50px; min-width: 70px;" onclick="getAll();"></div>
+    <div id="app" style="min-height: 50px; min-width: 70px;" onclick="getProduct(localStorage.products[1]._id);"></div>
+    <div id="console"></div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>console.log("easter egg, good job chad");</script>
     <script>
       var appContainer = document.getElementById('app');
+      var con = document.getElementById('console')
       function getAll() {
         axios.get('http://54.218.222.109:3030/products')
           .then(function (res) {
             if (typeof(Storage) !== "undefined") {
-              console.log("Use the local storage");
+              cLog("Use the local storage");
               localStorage.setItem("products", JSON.stringify(res.data.data));
             } else {
-              console.log("This browser needs updating");
+              cLog("This browser needs updating");
             }
-            console.log(localStorage);
+            cLog(localStorage);
           })
           .catch(function (err) {
-            console.log(err);
+            cLog(err);
           });
       }
 
       function getProduct(id) {
         axios.get('http://54.218.222.109:3030/products/' + id)
           .then(function (res) {
+            cLog(res);
             console.log(res);
           })
           .catch(function (err) {
-            console.log(err);
+            cLog(err);
           });
       }
 
@@ -49,7 +57,7 @@
           var temp = JSON.parse(localStorage.products);
           temp.forEach(function (e) {
             if (e.category == category) {results.push(e);}
-            console.log(results);
+            cLog(results);
           });
         } else {
           getAll(getIn(category));
@@ -63,6 +71,32 @@
         document.getElementById('product-price').innerHTML = product.price;
         document.getElementById('product-slug').innerHTML = product.slug;
         document.getElementById('product-description').innerHTML = product.category;
+      }
+
+      function cLog(input) {
+        if (typeof(input) == 'object') {
+          if (input.products[0]) {
+            var data = input.products;
+            con.innerHTML += "<div class='log-expand' onclick='expandDiv(this, " + data + ")'><p>Expand</p></div><br />";
+            return;
+          }
+          input = JSON.stringify(input);
+        }
+        con.innerHTML += "<p class='log-output'>" + input + "</p><br />";
+      }
+
+      function expandDiv(inp, data) {
+        if (inp.className == 'log-expand') {
+          var ihtml = '';
+          for (var i = 0; i < data.length; i++) {
+            ihtml += '<p class="log-output">' + JSON.stringify(data[i]) + '</p>';
+          }
+          inp.className = 'log-expanded';
+          inp.innerHTML = '<p>Expanded</p>' + ihtml + '<br />';
+        } else {
+          inp.className = 'log-expand';
+          inp.innerHTML = '<p>Expand</p><br />';
+        }
       }
     </script>
   </body>

@@ -11,7 +11,8 @@
 	<meta name="description" content="">
     <!-- site css -->
     <link rel="stylesheet" href="../build/site.min.css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="shop.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
@@ -62,8 +63,130 @@
     </nav>
     <!-- Content -->
     <main style="text-align: center;">
-      <i class="fa fa-cogs under-contsruction" aria-hidden="true" style="color: black; font-size: 250px; margin-top: 15%;"></i>
-      <h1 style="text-align: center;">Pardon our dust, this page is under construction.</h1>
+      <div id="app"></div>
     </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+
+    var appContainer = document.getElementById('app');
+    var prodJSON;
+
+    function getAll(render) {
+      axios.get('http://54.218.222.109:3030/products')
+        .then(function (res) {
+          if (typeof(Storage) !== "undefined") {
+            console.log("Use the local storage");
+            localStorage.setItem("products", JSON.stringify(res.data.data));
+            prodJSON = res.data.data;
+            if (render) {
+              renderPage(prodJSON);
+            }
+          } else {
+            console.log("This browser needs updating");
+          }
+          console.log(localStorage);
+        })
+        .catch(function (err) {
+          console.log(err);
+        });
+    }
+
+    getAll(true);
+
+    function getProduct(id) {
+      axios.get('http://54.218.222.109:3030/products/' + id)
+        .then(function (res) {
+          console.log(res);
+        })
+        .catch(function (err) {
+          console.log(err);
+        });
+    }
+
+    function getIn(category) {
+      var results = [];
+      if (localStorage.products) {
+        var temp = JSON.parse(localStorage.products);
+        temp.forEach(function (e) {
+          if (e.category == category) {results.push(e);}
+          console.log(results);
+        });
+      } else {
+        getAll(getIn(), category);
+      }
+    }
+
+    var components = {products: []};
+
+    function addComp(comp) {
+      components[comp.id] = comp;
+      appContainer.appendChild(comp);
+    }
+
+    function renderProducts(products, category) {
+      var i = 0;
+      products.forEach(function(e) {
+        if (e.name == 'test') return;
+        if (category && e.category != category) {
+          console.log(category);
+          console.log(e.category);
+          return;
+        }
+        if (!e.price) {
+          // find average cost
+          var total = {total: 0, count: 0};
+          e.stockArray.forEach(function (e) {
+            total.total += e.cost;
+            total.count ++;
+          });
+          var average = total.total / total.count;
+          e.price = (average * e.info.markup * 0.01) + average;
+
+          if ((e.price % 10) != 0) {
+            e.price = (Math.ceil(e.price / 10) * 10) - 1;
+          } else {
+            e.price = e.price - 1;
+          }
+        }
+        var ihtml = '';
+        console.log(e.name);
+        ihtml += '<p class="productCat">' + e.category + ' | ' + e.subCategory + '</p>';
+        ihtml += '<img src="../img/products/' + e.name.replace(/\s+/g, '') + '.jpg" alt="' + e.name + '" />';
+        ihtml += '<p class="productName">' + e.slug + '</p>';
+        ihtml += '<p class="productPrice">$' + e.price + '</p>';
+        ihtml += '<a class="productMore" href="/shop/products/' + e.barcodeId + '">See More</a>';
+        ihtml += '<p class="hidden">' + JSON.stringify(e) + '</p>';
+        var result = '<div id=' + Math.floor(Math.random() * 1000) + ' class="productContainer column large-3 medium-6 small-12" style:"z-index: ' + i + '">' + ihtml + '</div>';
+        components.shopCatalog.innerHTML += result;
+        components.products.push(result);
+        i++;
+      });
+    }
+
+    function renderPage(products) {
+      var temp = document.createElement("div");
+      temp.id = 'shopHeading';
+      addComp(temp);
+      temp.innerHTML = "<select id='sort'><option>Select a category</option><option>Components</option><option>Desktops</option><option>Drives</option><option>Accessories</option><option>Software</option><option>Laptops</option></select><button onclick='sort()'>Sort</button>";
+      temp = document.createElement("div");
+      temp.id = 'shopCatalog';
+      if (products) {
+        components.shopCatalog = temp;
+        renderProducts(products);
+        appContainer.appendChild(temp);
+      } else {
+        addComp(temp);
+      }
+      temp = document.createElement("div");
+      temp.id = 'shopFooter';
+      addComp(temp);
+    }
+
+    function sort() {
+      var category = document.getElementById('sort').value;
+      renderProducts(prodJSON, category);
+    }
+
+    </script>
   </body>
 </html>
