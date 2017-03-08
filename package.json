@@ -10,7 +10,8 @@
     "gulp-sass": "^3.1.0",
     "node-sass": "^4.5.0",
     "nodemailer": "^3.1.4",
-    "pug": "^2.0.0-beta11"
+    "pug": "^2.0.0-beta11",
+    "serve-favicon": "^2.4.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

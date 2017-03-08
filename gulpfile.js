@@ -15,7 +15,7 @@ let jsES6    = 'src/js/*.js',
     jsFiles  = [ jsPath + 'jquery-1.10.1.min.js', jsPath + '*.js'],
     jsDest   = 'build';
 let cssFiles = 'src/css/**/*.css',
-    cssDest  = 'build';
+    cssDest  = 'public/build';
 
 gulp.task('scripts', ['babelify'], function() {
   return gulp.src(jsFiles)
