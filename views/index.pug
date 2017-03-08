@@ -1,0 +1,38 @@
+doctype html
+html
+  include includes/head.pug
+  // Include scripts or stylesheets specific to this page
+  body
+    include includes/navbar.pug
+    main(class='main with-promos' role='main')
+      //- A slide
+          div(class='slides fade')
+            img(src='img/slider/pre-owned.png')
+            div(class='text')Caption
+      div(class='slideshow-container' style='padding-top: 1em')
+        div(class='slides fade')
+          img(src='img/slider/home-repair.png')
+
+        div(class='slides fade')
+          img(src='img/slider/pre-owned.png')
+
+        div(class='slides fade')
+          img(src='img/slider/delivery.png')
+
+        a(class='prev' onclick='plusSlides(-1)') &#10094;
+        a(class='next' onclick='plusSlides(1)') &#10095;
+      br
+
+      div(style='text-align: center;')
+        span(class='dot' onclick='currentSlide(1)')
+        span(class='dot' onclick='currentSlide(2)')
+        span(class='dot' onclick='currentSlide(3)')
+
+      // 4 boxes
+      section(id='promos' class='promos row')
+        ul
+          li(id='promo-position-0' class='promo-position promo-tile-position-0 column large-3 medium-6 small-12')
+            a(class='promo promo-nuc' data-promo-id='nuc')
+              span(class='promo-label') A true desktop experience.
+
+      include includes/footer.pug

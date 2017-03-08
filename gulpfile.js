@@ -13,9 +13,9 @@ let jsES6    = 'src/js/*.js',
     jsPath   = 'src/js/babeled/',
     // Each file must be included because jquery has to come before slick, bootstrap, and the site js
     jsFiles  = [ jsPath + 'jquery-1.10.1.min.js', jsPath + '*.js'],
-    jsDest   = 'public/build';
+    jsDest   = 'build';
 let cssFiles = 'src/css/**/*.css',
-    cssDest  = 'public/build';
+    cssDest  = 'build';
 
 gulp.task('scripts', ['babelify'], function() {
   return gulp.src(jsFiles)

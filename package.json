@@ -4,9 +4,13 @@
   "description": "The site for the Prime Systems Computer Store",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp-sass": "^3.1.0",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
     "gulp-less": "^3.3.0",
-    "node-sass": "^4.5.0"
+    "gulp-sass": "^3.1.0",
+    "node-sass": "^4.5.0",
+    "nodemailer": "^3.1.4",
+    "pug": "^2.0.0-beta11"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
