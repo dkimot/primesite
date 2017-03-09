@@ -23,7 +23,7 @@ server.use('/fonts', express.static(path.join(__dirname, 'public', 'fonts')));
 server.post('/contact/sendmail', (req, res) => {
   // Send email
 });
-server.get('/products', (req, res) => {
+server.get('/products/**/*', (req, res) => {
   res.redirect('http://shop.primesystemsinc.com');
 });
 
