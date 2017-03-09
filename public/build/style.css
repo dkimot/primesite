@@ -512,7 +512,7 @@ title, script, meta, style {
 #navbar .navbar-link-logo {
   background-size: 120px 44px;
   background-repeat: no-repeat;
-  background-image: url(../img/ps-logo.png);
+  background-image: url(../img/ps-logo1.png);
   background-position: center center;
   width: 100px;
 }
@@ -532,10 +532,6 @@ title, script, meta, style {
 .promos {
   border-bottom: 2px solid #fff;
   height: 200px;
-}
-
-main {
-  padding-top: 1.5em;
 }
 
 .promos ul {

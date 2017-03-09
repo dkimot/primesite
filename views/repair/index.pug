@@ -8,5 +8,283 @@ html
   body
     include ../includes/navbar.pug
     main(class='main' role='main')
-      h4 Prime Systems Repair
+      h1(style="padding-left: 8px; padding-top: 8px;") Repair Shop
+      br
+      .content-div.center
+        h3 One stop. Any Windows computers. 100% satisfaction guaranteed.
+        br
+        h4 Open from Monday to Friday 9 to 6 and Saturday 10 to 3
+        p(style="font-size: 13px; font-weight: 600; color: #101010;") Looking for something simpler? Quick questions can be solved at the help desk Monday to Friday 9 to 6.
+      br
+      br
+      .content-div.auto
+        div
+          p.content Repair Services:
+          p(style="font-weight: 100; color: #101010;") Note: Because all computers are different hours listed are only estimates and reflect billable time, not the actual time to be completed.
+          p(style="font-size: 14px; padding-top: 0px; padding-bottom: 5px;") Does not include parts, if any.
+          br
+          .accordion-container
+            button.accordion
+              h4 Tuneups
+              p We can get that lemon running for you.
+            .panel.acc-panel
+              p.acc-content Junk Cleanup
+              span.rightf 1.5 hrs
+              br
+
+              p.acc-content General Tuneup
+              span.rightf 2 hrs
+              br
+
+              p.acc-content Fresh Install
+              span.rightf 1.5 hrs
+              br
+
+              p.acc-content Fresh Install w/Data Transfer
+              span.rightf 2 hrs
+              br
+
+            button.accordion
+              h4 Virus Removal
+              p Get rid of annoying popups and secure your data.
+            .panel.acc-panel
+              p.acc-content Scan and Removal
+              span.rightf 1.5hrs
+              br
+
+            button.accordion
+              h4 Desktop Repair
+              p Fix internal components such as processors.
+            .acc-panel.panel
+              p.acc-content Diagnosis
+              span.rightf 15 min
+              br
+
+              p.acc-content Fan Replacement
+              span.rightf 15 min
+              br
+
+              p.acc-content CD/DVD Drive Replacement
+              span.rightf 15 min
+              br
+
+              p.acc-content Motherboard
+              span.rightf 1hr +
+              br
+
+              p.acc-content Blue Screen
+              span.rightf To Be Determined by Diagnostics
+              br
+
+              p.acc-content RAM Install
+              span.rightf 15 mins
+              br
+
+              p.acc-content Software Install/Uninstall
+              span.rightf Contact Us
+              br
+
+            button.accordion
+              h4 Laptop Repair
+              p Repairing screens, keyboards, power, etc.
+            .panel.acc-panel
+              p.acc-content Keyboard Replacement
+              span.rightf 30 min
+              br
+
+              p.acc-content Screen Replacement
+              span.rightf 1 hr
+              br
+
+              p.acc-content Motherboard
+              span.rightf 2 hrs +
+              br
+
+              p.acc-content DC Jack Replacement
+              span.rightf 2 hrs
+              br
+
+              p.acc-content Internal Battery Replacement
+              span.rightf 15 min
+              br
+
+              p.acc-content RAM Install
+              span.rightf 15 min
+
+              p.acc-content Blue Screen
+              span.rightf To Be Determined by Diagnostics
+              br
+
+              p.acc-content Software Install/Uninstall
+              span.rightf Contact Us
+              br
+
+            button.accordion
+              h4 Part Installation
+              p Building a computer? Let us help.
+            .panel.acc-panel
+              p.acc-content Installations not listed under Desktop Repair or Laptop Repair
+              span.rightf Please Contact Us
+
+            button.accordion
+              h4 Other
+            .panel.acc-panel
+              p.acc-content Data Transfer
+              span.rightf 45 min
+              br
+
+              p.acc-content Hard Drive Clone
+              span.rightf 30 min
+              br
+
+              - var phone = '(801) 546-2666'
+              p.acc-content For any repair questions please call:
+                a(href="tel:18015462666" style="display: inline-block;")
+                  phone
+            br
+          br
+          p(style="font-weight: 100; color: #101010; font-size: 15px;") Note: Will not repair Windows Surface tablets or similar products.
+          br
+          button.accordion
+            h4 Disclaimer
+            p Click to expand
+          .panel.acc-panel
+            p.acc-content
+              | The following is the disclaimer you sign at check-in which waives Prime Systems from certain liabilities concerning your data. <br /><br />
+
+              | 1. Prime Systems makes every effort to protect your data. However we cannot be held responsible for data loss.<br />
+              | 2. I give Prime Systems permission to view the contents of my computer as necessary to repair. This may include opening the computer’s case and checking files on the disks.<br />
+              | 3. All Non-Warranty work is $75.00 / Hour with a minimum 1/2 hr. labor charge. Your Prime Systems Warranty covers parts and labor. The Warranty does not cover physical damage, viruses, spyware or other software problems.<br />
+              | 4. Computers are serviced in the order they come into our shop. We make every effort to complete your repair in a timely manner but we cannot guarantee an exact date for work completion. We do offer a “PAID RUSH” for $50, which means that your unit will be the next one started from the queue when a space opens on the services benches. It does not guarantee a completion time. It is not possible to determine a completion time before we evaluate what the problem is. Diagnosis with hardware tests, troubleshooting and scanning for infections all take time and is determined by the age of the unit, condition of hardware, software corruption, severity of infections and other factors that can only be discovered by evaluation.<br />
+              | 5. Prime Systems is not liable for any lost disks that may have been left in your drives at the time of check-in. Please check them before you sign in and leave.<br />
+              | 6. Prime Systems will make all reasonable efforts to contact the customer when service/repairs are completed; however, Prime Systems reserves the right to sell or recycle any items that have not been picked up after 60 days.<br />
+              | 7. This sheet must be signed by the customer, for above work to be completed.<br />
+
     include ../includes/footer.pug
+    script(type="text/javascript").
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function() {
+          /* Toggle between adding and removing the "active" class,
+          to highlight the button that controls the panel */
+          this.classList.toggle("active");
+
+          /* Toggle between hiding and showing the active panel */
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            console.log("Changing display to none...");
+            panel.style.display = "none";
+          } else {
+            console.log("Changing to block");
+            panel.style.display = "block";
+          }
+        }
+      }
+
+    style(type="text/css").
+
+      p {
+        color: #303030;
+        font-size: 19px;
+        padding-top: 5px;
+      }
+
+      li > a > p {
+        color: white;
+      }
+
+      p.content {
+        color: #303030;
+        text-align: left;
+      }
+
+      .content-div {
+        width: 80%;
+      }
+
+      .content-div.center {
+        margin: auto;
+        text-align: center;
+      }
+
+      .acc-panel {
+        color: #e3e3e3;
+      }
+
+      .content-div.auto {
+        margin: auto;
+      }
+
+      /* ===== Accordion CSS ===== */
+      button.accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+      }
+
+      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+      button.accordion.active, button.accordion:hover {
+          background-color: #ddd;
+          font-size: 21px;
+      }
+
+      button.accordion {
+        font-size: 16px;
+      }
+
+      /* Style the accordion panel. Note: hidden by default */
+      div.panel {
+          padding: 13px 18px;
+          background-color: white;
+          display: none;
+          border-style: solid;
+          border-width: 0px 3px 0px 3px;
+      }
+
+      .accordion-container {
+        width: 100%;
+        margin: auto;
+      }
+
+      p.acc-content {
+        color: #303030;
+        font-size: 18px;
+        display: inline-block;
+      }
+
+      p.acc-content.right {
+        text-align: right;
+      }
+
+      /* ===== End Accordion CSS ===== */
+
+      h4 {
+        font-size: 24px;
+      }
+
+      div.repair-3 {
+        min-width: 33%;
+        display: inline-block;
+        min-height: 200px;
+        padding: 15px auto;
+        text-align: center;
+        align-items: center;
+      }
+
+      div.repair-3 > ul > li {
+        color: #404040;
+        font-size: 19px;
+      }
+
+      span.rightf {
+        float: right;
+        color: #303030;
+      }

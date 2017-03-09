@@ -37,6 +37,7 @@ server.get('/*', (req, res, next) => {
   res.render(url);
 });
 
+/*
 server.use((req, res, next) => {
   let err = new Error('Not Found');
   err.status = 404;
@@ -51,6 +52,7 @@ server.use((err, req, res, next) => {
   res.status(err.status || 500);
   res.render('error');
 })
+*/
 
 server.listen(3030, () => {
   console.log('Server listening on %s', 3030);

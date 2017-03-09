@@ -13,7 +13,7 @@ let jsES6    = 'src/js/*.js',
     jsPath   = 'src/js/babeled/',
     // Each file must be included because jquery has to come before slick, bootstrap, and the site js
     jsFiles  = [ jsPath + 'jquery-1.10.1.min.js', jsPath + '*.js'],
-    jsDest   = 'build';
+    jsDest   = 'public/build';
 let cssFiles = 'src/css/**/*.css',
     cssDest  = 'public/build';
 
