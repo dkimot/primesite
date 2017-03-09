@@ -24,7 +24,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "buildComp": "node ./src/app/render.js"
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",

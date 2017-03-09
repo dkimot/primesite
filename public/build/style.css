@@ -79,7 +79,7 @@
   background-image: url("../img/promos/components.png");
 }
 
-.main {
+main {
   margin-top: 44px;
 }
 
@@ -512,7 +512,7 @@ title, script, meta, style {
 #navbar .navbar-link-logo {
   background-size: 120px 44px;
   background-repeat: no-repeat;
-  background-image: url(../img/ps-logo1.png);
+  background-image: url(../img/ps-logo-white.png);
   background-position: center center;
   width: 100px;
 }
