@@ -59,11 +59,11 @@ server.use((err, req, res, next) => {
 })
 */
 
-server.listen(3030, (err) => {
+server.listen(PORT, (err) => {
   if (err)
     console.error(err)
   else
-    console.log('Server listening on %s', 3030);
+    console.log('Server listening on %s', PORT);
 });
 
 if (process.env.environment === 'PRODUCTION') {
