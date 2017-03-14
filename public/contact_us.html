@@ -30,6 +30,15 @@
       ga('send', 'pageview');
 
     </script>
+    <style>
+      #confirm.hidden {
+        display: none;
+      }
+
+      #confirm {
+        display: block;
+      }
+    </style>
   </head>
   <body style="background-color: #FFFFFF">
     <!-- nav -->
@@ -85,6 +94,7 @@
           <textarea name="msg" placeholder=" Message" id="input-msg"></textarea><br /><br />
           <input type="submit" value="Submit" onclick="return submitForm()"/>
         </form>
+        <p id="confirm" class="hidden">Your message was received.</p>
       </div>
     </main><br />
     <!-- footer -->
@@ -107,9 +117,7 @@
         // Get msg
         var msg = document.getElementById('input-msg').value;
 
-        // Test
-        //alert("Name: " + name + "\nEmail: " + email + "\nMessage: " + msg);
-
+        var confirm = document.getElementById('confirm');
         // Send request
         var params = new URLSearchParams();
         params.append('email', email);
@@ -118,6 +126,7 @@
         axios.post('./php/contact.php', params)
           .then(function (res) {
             console.log(res);
+            confirm.className = '';
           })
           .catch(function (err) {
             console.log(err);
