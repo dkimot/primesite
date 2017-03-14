@@ -8,6 +8,7 @@ const uglify   = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
 const gzip     = require('gulp-gzip');
 const bs       = require('browser-sync').create();
+const sass     = require('gulp-sass');
 
 let jsES6    = 'src/js/*.js',
     jsPath   = 'src/js/babeled/',

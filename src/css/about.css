@@ -1,0 +1,12 @@
+h3.about {
+  margin-left: 10%;
+}
+
+div.about {
+  width: 80%;
+  margin: auto;
+}
+
+div.about > p {
+  font-size: 18px;
+}

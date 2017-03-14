@@ -76,39 +76,3 @@
     window.classie = classie;
   }
 })(window);
-var product = '<div class="product">  <h3 class="product" id="product-name"></h3>  <img src="" alt="" id="product-image" />  <h4 class="product" id="product-slug"></h4>  <p class="product" id="product-description"></p>  <h2 class="product" id="product-price"></h2></div>';
-
-var components = {
-  product: product,
-  null: 'null'
-};
-function sendMail() {
-  var formData = {
-    name: 'test',
-    email: 'email',
-    msg: 'msg'
-  };
-  var form = document.getElementsByName('contact-form');
-  form = form[0];
-  var gtg = true;
-  var i = 0;
-  while (gtg) {
-    console.log(form[i]);
-    if (!form[i]) {
-      gtg = false;
-      break;
-    }
-    var value = form[i].value;
-    var name = form[i].name;
-    if (formData[name]) {
-      formData[name] = value;
-    }
-    i++;
-  }
-  form = form[0];
-  axios.post('http://api.primesystemsinc.com/mail', formData).then(function (response) {
-    console.log(response);
-  }).catch(function (err) {
-    console.log(err);
-  });
-}
