@@ -18,6 +18,7 @@ server.set('view engine', 'pug');
 
 server.use('/build', express.static(path.join(__dirname, 'public', 'build')));
 server.use('/img', express.static(path.join(__dirname, 'public', 'img')));
+server.use('/img', express.static('public/img'));
 server.use('/fonts', express.static(path.join(__dirname, 'public', 'fonts')));
 
 server.post('/contact/sendmail', (req, res) => {
