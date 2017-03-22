@@ -4,8 +4,10 @@ const express    = require('express');
 const bodyParser = require('body-parser');
 const favicon    = require('serve-favicon');
 const path       = require('path');
+const fs         = require('fs');
+const lwip       = require('lwip');
 
-const PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT || 3031;
 
 // Create new server
 const server = express();
@@ -16,14 +18,40 @@ server.use(bodyParser.json());
 server.set('views', './views');
 server.set('view engine', 'pug');
 
+// Test Endpoint Start
+server.use('/api/hello', (req, res) => {
+  res.send('Hello!');
+  console.log('Hello!');
+});
+
+// Images Endpoint Start
+server.post('/api/img', (req, res) => {
+  console.log('POST: Image');
+  let imagePath = req.body.imagePath;
+  let image = req.body.imageUTF8;
+
+  lwip.open(image, (err, image) => {
+    if (err) {
+      console.log(err);
+    } else {
+      image.toBuffer('jpg', (err, buffer) => {
+        fs.writeFileSync((path.join(__dirname, 'public', 'img') + imagePath), buffer);
+      });
+    }
+  });
+
+});
+// Images Endpoint End
+
 server.use('/build', express.static(path.join(__dirname, 'public', 'build')));
 server.use('/img', express.static(path.join(__dirname, 'public', 'img')));
-server.use('/img', express.static('public/img'));
 server.use('/fonts', express.static(path.join(__dirname, 'public', 'fonts')));
 
 server.post('/contact/sendmail', (req, res) => {
+
   // Send email
 });
+
 server.get('/products/**/*', (req, res) => {
   res.redirect('http://shop.primesystemsinc.com');
 });

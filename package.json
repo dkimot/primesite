@@ -8,6 +8,7 @@
     "express": "^4.15.2",
     "gulp-less": "^3.3.0",
     "gulp-sass": "^3.1.0",
+    "lwip": "0.0.9",
     "node-sass": "^4.5.0",
     "nodemailer": "^3.1.4",
     "pug": "^2.0.0-beta11",
