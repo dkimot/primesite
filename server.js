@@ -25,7 +25,7 @@ server.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 server.use(bodyParser.json());
 server.set('views', './views');
 server.set('view engine', 'pug');
-server.use(allowCrossDomain(req, res, next));
+server.use(allowCrossDomain);
 
 // Test Endpoint Start
 server.use('/api/hello', (req, res) => {
