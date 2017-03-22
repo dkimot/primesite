@@ -36,7 +36,6 @@ server.use('/api/hello', (req, res) => {
 
 // Images Endpoint Start
 server.post('/api/img', (req, res) => {
-  console.log(req);
   let imagePath = req.body.imagePath;
   let image = req.body.imageUTF8;
 
