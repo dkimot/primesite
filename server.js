@@ -17,6 +17,7 @@ server.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 server.use(bodyParser.json());
 server.set('views', './views');
 server.set('view engine', 'pug');
+server.use(allowCrossDomain);
 
 // Test Endpoint Start
 server.use('/api/hello', (req, res) => {
@@ -29,6 +30,7 @@ server.post('/api/img', (req, res) => {
   console.log('POST: Image');
   let imagePath = req.body.imagePath;
   let image = req.body.imageUTF8;
+
 
   lwip.open(image, (err, image) => {
     if (err) {
@@ -99,4 +101,13 @@ if (process.env.environment === 'PRODUCTION') {
   process.on('uncaughtException', (err) => {
     console.err(JSON.parse(JSON.stringify(err, ['stack', 'message', 'inner'], 2)));
   });
+}
+
+
+/* Allow Cross Domain Middleware */
+const allowCrossDomain = function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET,POST');
+
+  next();
 }
