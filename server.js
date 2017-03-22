@@ -63,6 +63,7 @@ server.post('/contact/sendmail', (req, res) => {
 });
 
 server.get('/products/**/*', (req, res) => {
+  console.log('Products Route')
   res.redirect('http://shop.primesystemsinc.com');
 });
 
