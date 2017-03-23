@@ -1,42 +1,9 @@
 {
   "name": "primesite",
-  "version": "0.1.0",
-  "description": "The site for the Prime Systems Computer Store",
-  "main": "gulpfile.js",
-  "dependencies": {
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "gulp-less": "^3.3.0",
-    "gulp-sass": "^3.1.0",
-    "lwip": "0.0.9",
-    "node-sass": "^4.5.0",
-    "nodemailer": "^3.1.4",
-    "pug": "^2.0.0-beta11",
-    "serve-favicon": "^2.4.1"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-clean-css": "^3.0.3",
-    "gulp-concat": "^2.6.1",
-    "gulp-gzip": "^1.4.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^2.0.1",
-    "node-sass": "^4.5.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
-    "renderSass": "node sass.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dkimot/primesite.git"
-  },
+  "version": "0.0.1",
+  "description": "The website for Prime Systems, Inc. in Kaysville, UT",
+  "main": "index.js",
+  "repository": "https://github.com/dkimot/primesite.git",
   "author": "Davis Kimoto",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dkimot/primesite/issues"
-  },
-  "homepage": "https://github.com/dkimot/primesite#readme"
+  "license": "UNLICENSED"
 }
