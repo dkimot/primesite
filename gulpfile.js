@@ -3,6 +3,7 @@ const browserSync  = require('browser-sync');
 const sass         = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const minifyCSS    = require('gulp-minify-css');
+const cleanCSS     = require('gulp-clean-css');
 const notify       = require('gulp-notify');
 const gutil        = require('gulp-util');
 const cp           = require('child_process');
@@ -69,6 +70,9 @@ const src = {
   }
 };
 
+// Set destinations for the files
+const dest = 'client/dist/build/';
+
 gulp.task('test', () => {
   let test = 'views/blog';
   let query = 'views/';
@@ -94,22 +98,21 @@ gulp.task('test', () => {
 
 })
 
-// Set destinations for the files
-const dest = 'dist/build/';
-
 /* ========== CSS ========== */
 /*
  * Compile styles
  */
-gulp.task('style', ['sass'], function() {
-
+gulp.task('style', function() {
+  return gulp.src(src.client.css)
+    .pipe(concat('site.css'))
+    .pipe(rename('site.min.css'))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest(dest))
 });
 
 gulp.task('sass', function() {
- return gulp.src(src.sass)
-  .pipe(sourcemaps.init())
+ return gulp.src(src.client.sass)
   .pipe(sass().on('error', sass.logError))
-  .pipe(sourcemaps.write())
   .pipe(autoprefixer('last 10 versions', 'ie 9'))
   .pipe(minifyCSS({keepBreaks: false}))
   .pipe(gulp.dest('client/src/css'))
@@ -123,7 +126,7 @@ gulp.task('sass', function() {
  * Minify JS
  */
 gulp.task('scripts', function() {
-  return gulp.src(src.js)
+  return gulp.src(src.client.js)
     .pipe(concat('site.js'))
     .pipe(rename('site.min.js'))
     .pipe(uglify())
@@ -142,7 +145,7 @@ gulp.task('scripts', function() {
  */
 // minifiy images
 gulp.task('images', function () {
-   return gulp.src(src.img)
+   return gulp.src(src.client.img)
        .pipe(imagemin({
            progressive: true,
            svgoPlugins: [{removeViewBox: false}],
@@ -158,7 +161,6 @@ gulp.task('images', function () {
  * Compile Pug Views into HTML
  */
 gulp.task('views:render', function() {
-
   // Compile root views
   getFiles('client/views').forEach((file) => {
     gulp.src('client/views/' + file)

@@ -1,0 +1,33 @@
+body
+  div(class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium")
+    button(class="menu-icon" type="button" data-toggle)
+    .title-bar-title Menu
+  .top-bar#example-menu
+    .top-bar-left
+      ul(class="dropdown menu" data-dropdown-menu)
+        li(class="menu-text")
+          a(href="/index.html") Prime Systems
+        li.has-submenu
+          a(href="/products/") Products
+          ul(class="submenu menu vertical" data-submenu)
+            li
+              a(href="/products/desktops") Desktops
+            li
+              a(href="/products/laptops") Laptops
+            li
+              a(href="/products/components") Components
+            li
+              a(href="/products/accessories") Accessories
+            li
+              a(href="/products/pre-owned") Pre-Owned
+        li
+          a(href="about.html") About
+        li
+          a(href="repair.html") Repair
+    
+    .top-bar-right
+      ul.menu
+        li
+          input(type="search" placeholder="Search")
+        li
+          button(type="button" class="button") Search
