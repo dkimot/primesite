@@ -1,9 +1,37 @@
 {
   "name": "primesite",
-  "version": "0.0.1",
-  "description": "The website for Prime Systems, Inc. in Kaysville, UT",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "The site for the Prime Systems Computer Store",
+  "main": "gulpfile.js",
   "repository": "https://github.com/dkimot/primesite.git",
   "author": "Davis Kimoto",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/dkimot/primesite/issues"
+  },
+  "homepage": "https://github.com/dkimot/primesite#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.3.0",
+    "passport": "^0.3.2",
+    "pug": "^2.0.0-beta11",
+    "rethinkdb": "^2.3.3",
+    "thinky": "^2.3.8"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.0.0",
+    "gulp-pug2": "^0.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.1.2",
+    "imagemin-pngquant": "^5.0.0"
+  }
 }

@@ -100,7 +100,3 @@
   text-decoration: none;
   color: inherit;
 }
-
-ul.contact > li:hover > p > i {
-  font-size: 40px;
-}

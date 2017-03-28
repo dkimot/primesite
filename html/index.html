@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0. user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Foundation for Sites</title>
-    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="../src/css/foundation.min.css">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="../src/css/app.css">
   </head>
   <body>
     <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
@@ -146,10 +146,10 @@
         </div>
       </div>
     </footer>
+
     <!-- Required for Foundation -->
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+    <script src="build/site.min.js"></script>
+    <script>$(document).foundation();</script>
   </body>
 </html>
