@@ -3,4 +3,61 @@ html(class="no-js" lang="en" dir="ltr")
   include includes/head.pug
   include includes/navbar.pug
   
+  .callout.text-center
+    p Looking for repair? Check here: <a href="#">Repair Shop</a>
+  
+  div(class="orbit" role="region" aria-label="Weekly Deals" data-orbit)
+    ul.orbit-container
+      button(class="orbit-previous" aria-label="previous")
+        span.show-for-sr Previous Slide
+        | &#9664;
+      button(class="orbit-next" aria-label="next")
+        span.show-for-sr Next Slide
+        | &#9654;
+      li.orbit-slide
+        div
+          h3.text-center You can throw some text in here!
+          p.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          h3.text-center This Orbit slide has chill
+      li.orbit-slide
+        div
+          h3.text-center You can throw some text in here!
+          p.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          h3.text-center This Orbit slide has chill
+      li.orbit-slide
+        div
+          h3.text-center You can throw some text in here!
+          p.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          h3.text-center This Orbit slide has no chill
+    nav.orbit-bullets
+      button(class="is-active" data-slide="0")
+        span.show-for-sr First slide details.
+      button(data-slide="1")
+        span.show-for-sr Second slide details.
+      button(data-slide="2")
+        span.show-for-sr Third slide details.
+        
+  .row-center
+    .small-4.counter
+      .card
+        .card-divider Product/Promo 1
+        img(src="http://placehold.it/368x250")
+        .card-section
+          h4 This is a card.
+          p You can put some text here.
+    .small-4.counter
+      .card
+        .card-divider Product/Promo 1
+        img(src="http://placehold.it/368x250")
+        .card-section
+          h4 This is a card.
+          p You can put some text here.
+    .small-4.counter
+      .card
+        .card-divider Product/Promo 1
+        img(src="http://placehold.it/368x250")
+        .card-section
+          h4 This is a card.
+          p You can put some text here.
+  
   include includes/footer.pug
