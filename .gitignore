@@ -2,4 +2,4 @@
 npm-debug.log
 .DS_Store
 /wp-site
-/dist
+/client/dist
