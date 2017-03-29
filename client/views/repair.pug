@@ -3,6 +3,135 @@ html(class="no-js" lang="en" dir="ltr")
   include includes/head.pug
   include includes/navbar.pug
   
+  // Repair Shop Body
+  // Page Title
+  h1.text-center Welcome to the repair shop.
+  h3.text-center One stop. Any Windows computer. 100% satisfaction guaranteed.
+  h5.text-center Open from Monday to Friday 9 to 6 and Saturday 10 to 3.
+  p Note: Because all computers are different, hours listed are only estimates and reflect billing time, not the actual time to be completed.
   
+  // Accordion
+  h3.text-center Repair Services:
+  
+  ul(class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true" style="width: 80%; margin: auto; padding-bottom: 25px;")
+    li(class="accordion-item" data-accordion-item)
+      a(href="#" class="accordion-title") Tuneups
+      div(class="accordion-content" data-tab-content)
+        span.float-left Junk Cleanup
+        span.float-right 1.5 hrs
+        br
+        span.float-left General Tuneup
+        span.float-right 2 hrs
+        br
+        span.float-left Fresh Install
+        span.float-right 1.5 hrs
+        br
+        span.float-left Fresh Install w/Data Transfer
+        span.float-right 2 hrs
+        br
+    li(class="accordion-item" data-accordion-item)
+      a(href="#" class="accordion-title") Virus Removal
+      div(class="accordion-content" data-tab-content)
+        span.float-left Scan and Removal
+        span.float-right 1.5 hrs
+        br
+          
+    li(class="accordion-item" data-accordion-item)
+      a(href="#" class="accordion-title") Desktop Repair
+      div(class="accordion-content" data-tab-content)
+        span.float-left Diagnosis
+        span.float-right 15 min
+        br
+        span.float-left Fan Replacement
+        span.float-right 15 min
+        br
+        span.float-left CD/DVD Drive Replacement
+        span.float-right 15 min
+        br
+        span.float-left Motherboard
+        span.float-right 2 hrs
+        br
+        span.float-left Blue Screen
+        span.float-right To be determined by diagnostics
+        br
+        span.float-left RAM Install
+        span.float-right 15 min
+        br
+        span.float-left Software Install/Uninstall
+        span.float-right Contact US
+        br
+          
+      li(class="accordion-item" data-accordion-item)
+        a(href="#" class="accordion-title") Laptop Repair
+        div(class="accordion-content" data-tab-content)
+          span.float-left Keyboard Replacement
+          span.float-right 30 min
+          br
+          span.float-left Screen Replacement
+          span.float-right 1 hr
+          br
+          span.float-left Motherboard
+          span.float-right 2 hrs +
+          br
+          span.float-left DC Jack Replacement
+          span.float-right 2 hrs
+          br
+          span.float-left Internal Battery Replacement
+          span.float-right 15 min
+          br
+          span.float-left RAM Install
+          span.float-right 15 min
+          br
+          span.float-left Blue Screen
+          span.float-right To be determined by diagnostics
+          br
+          span.float-left Software Install/Uninstall
+          span.float-right Contact Us
+          br
+            
+        li(class="accordion-item" data-accordion-item)
+          a(href="#" class="accordion-title") Part Installation
+          div(class="accordion-content" data-tab-content)
+            span.float-left Installations not listed under Desktop or Laptop Repair
+            span.float-right Contact Us
+            br
+              
+          li(class="accordion-item" data-accordion-item)
+            a(href="#" class="accordion-title") Other
+            div(class="accordion-content" data-tab-content)
+              span.float-left Data Transfer
+              span.float-right 45 min
+              br
+              span.float-left Hard Drive Clone
+              span.float-right 30 min
+              br
+              span.float-left For any repair question please call:
+              span.float-right
+                a(href="tel:18015462666") (801) 546-2666
+              br
+      
+      br
+      p.text-center Note: we will not repair Windows Surface tablets or similar products.
+      
+      ul(class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true" style="width: 80%; margin: auto; padding-bottom: 25px;")
+        li(class="accordion-item" data-accordion-item)
+          a(href="#" class="accordion-title") Disclaimer
+          div(class="accordion-content" data-tab-content)
+            div
+              p The following is the disclaimer you agree to at check-in which waives Prime Systems from certain liabilities concerning your data.
+              p 1. Prime Systems makes every effor to protect your data. However, we cannot be held responsible for data loss.
+              br
+              p 2. I give Prime Systems permission to view the contents of my computer as necessary to repair. This may include opening the computers case and checkin files on the disks.
+              br
+              p 3. All Non-Warranty work is $75.00/hr with a minimum 1/2 hr (30 min) labor charge. Your Prime Systems Warranty covers parts and labor. The Warranty does not cover physical damage, viruses, spyware or other software problems.
+              br
+              p 4. Computers are serviced in the order they come into our shop. We make every effort to complete your repair in a timely manner but we cannot guarantee an exact date for work completion. We do offer a "PAID RUSH" for $50.00, which means that your unit will be the next one started from the queue when a space opens on the service benches. It does not guarantee a completion time. It is not possible to determine a completion time before we evaluate what the problem is. Diagnosis with hardware tests, torubleshooting and scanning for infections all take time and is determined by the age of the unit, condition of hardware, software corruption, severity of infections and other factors that can only be discovered by evaluation.
+              br
+              p 5. Prime Systems is not liable for any lost disks that may have been left in your drives at the time of check-in. Please check them before you sign in and leave.
+              br
+              p 6. Prime Systems will make all reasonable efforts to contact the customer when service/repairs are completed; however, Prime Systems reserves the right to sell or recycle any items that have not been picked up after 60 days.
+              br
+              p 7. By checking in your unit for work to be done you agree to these terms.
+            br
   
   include includes/footer.pug
