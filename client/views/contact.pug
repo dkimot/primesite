@@ -4,5 +4,18 @@ html(class="no-js" lang="en" dir="ltr")
   include includes/navbar.pug
   
   // Contact Body
+  .row
+    .medium-6.medium-centered.large-4.large-centered.columns
+      
+      form(style="padding-top: 15px;")
+        .row.columns.log-in-form
+          h4.text-center Drop us a line
+          label Name
+          input(type="text" placeholder="Name")
+          label Email
+          input(type="text" placeholder="Email")
+          label Message
+          textarea(placeholder="Message")
+          a(type="submit" class="button expanded") Send
   
   include includes/footer.pug
