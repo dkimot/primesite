@@ -1,13 +1,42 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { filterTable } from '../actions';
+import ProductTable from '../components/ProductTable';
+import { filterableTable } from '../styles/filterableTable.scss';
 
-const CatalogSearch = (props) => (
-  <div>
-    <input placeholder="Product Search" />
-  </div>
-)
+const CatalogSearch = ({ filter, onFilter }) => {
+  let input;
+
+  return (
+    <div className={filterableTable}>
+      <input
+        value={filter}
+        ref={node => {input = node;}}
+        placeholder="Product Search"
+        onChange={() => onFilter(input.value)} />
+      <ProductTable filter={filter} />
+    </div>
+  );
+};
 
 CatalogSearch.propTypes = {
-  params: React.PropTypes.object
-}
+  filter: PropTypes.string,
+  onFilter: PropTypes.func
+};
 
-export default CatalogSearch;
+const mapStateToProps = (state) => {
+  return {
+    filter: state.filter
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onFilter: filterText => dispatch(filterTable(filterText))
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CatalogSearch);
