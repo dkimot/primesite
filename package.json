@@ -16,10 +16,12 @@
     "jsonwebtoken": "^7.3.0",
     "passport": "^0.3.2",
     "pug": "^2.0.0-beta11",
+    "react-redux": "^5.0.3",
     "rethinkdb": "^2.3.3",
     "thinky": "^2.3.8"
   },
   "devDependencies": {
+    "babel-plugin-transform-object-assign": "^6.22.0",
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
